@@ -9,14 +9,14 @@ const MONGOCLIENT = require('mongodb');
 // ----------------------------------------------------------------------------
 // console.log('fone1');
 module.exports.createSchema = function (req, res) {
-    console.log('fone1');
-    MONGOCLIENT.connect('mongodb://aswinsasi.amtpl.in:27017', { useNewUrlParser: true }, (err, client) => {
+    console.log('habeeb');
+    MONGOCLIENT.connect('mongodb://localhost:27017', { useNewUrlParser: true }, (err, client) => {
 
         if (err) {
             console.log('Unable to connect to server');
         } else {
-            console.log('Connected to fcube server');
-            const DB = client.db('fcube');
+            console.log('Connected to habeeb server');
+            const DB = client.db('habeeb');
 
             //Users collection
             DB.createCollection("users", {

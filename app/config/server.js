@@ -1,7 +1,7 @@
 /**
  * @file server
  * @description Configuration variables related to server
- * @author Aswin Sasi
+ * @author Habeeb
  * created on 2018/12/03
  */
 

@@ -1,7 +1,7 @@
 /**
  * Index for settings component
  * @description Set routes for settings functions
- * @author Aswin Sasi
+ * @author Habeeb
  * created on 2018/12/05
  */
 
@@ -14,6 +14,7 @@ let user = require('./users');
 module.exports = {
     userDetails: user.userDetails,
     activityDetails: user.activityDetails,
-    nearLocations: user.getLocations
+    nearLocations: user.getLocations,
+    userCreate : user.userCreate
 }
 // ----------------------------------------------------------------------------

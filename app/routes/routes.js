@@ -4,7 +4,7 @@
  * respond to client requests. Application listens for requests that match 
  * the specified route(s) and method(s), and when it detects a match, 
  * it calls the specified callback function
- * @author Aswin Sasi
+ * @author Habeeb
  * created on 2018/12/03
  */
 
@@ -61,12 +61,12 @@ app.use(express.static('public'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json({ limit: '50mb' }));
 app.use(bodyParser.urlencoded({ extended: false, limit: '50mb' }));
-app.use(logger.requestL{{BASE_URL}}/api/v1/todosogger); // Log every request
-// app.use(auth.auth); {{BASE_URL}}/api/v1/todos// Authenticate the access token and set user session
-// app.use(validator.re{{BASE_URL}}/api/v1/todosquestValidator); // Validate every request parameters
-// app.use(validator.va{{BASE_URL}}/api/v1/todoslidateProspect); // Validate existance of prospect
-app.use(compression());{{BASE_URL}}/api/v1/todos
-// --------------------{{BASE_URL}}/api/v1/todos--------------------------------------------------------
+app.use(logger.requestLogger); // Log every request
+// app.use(auth.auth); // Authenticate the access token and set user session
+// app.use(validator.requestValidator); // Validate every request parameters
+// app.use(validator.validateProspect); // Validate existance of prospect
+app.use(compression());
+// ----------------------------------------------------------------------------
 
 /**
  * @method getRouter
@@ -85,6 +85,9 @@ exports.getRouter = function () {
         res.send('test')
     });
     app.post(v1 + 'dbcreation', dbschema.createSchema);
+
+    app.post(v1 + 'user/create', userIndex.userCreate);
+
     app.post(v1 + 'userdetails', userIndex.userDetails);
     app.post(v1 + 'activitydetails', userIndex.activityDetails);
     app.post(v1 + 'dialhistory', contactsIndex.callHistory);

@@ -1,7 +1,7 @@
 /**
  * @file winston
  * @description Configure winston for logging 
- * @author Aswin Sasi
+ * @author Habeeb
  * created on 2018/12/03 
  */
 
