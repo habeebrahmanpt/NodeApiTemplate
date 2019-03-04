@@ -1,0 +1,21 @@
+{
+  "name": "fcube",
+  "version": "1.0.0",
+  "description": "fcube backend system",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm start"
+  },
+  "author": "aswin",
+  "license": "ISC",
+  "dependencies": {
+    "compression": "^1.7.2",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.4",
+    "helmet": "^3.12.0",
+    "mongodb": "^3.0.8",
+    "winston": "^2.4.2",
+    "zaproxy": "^1.0.0-rc.1"
+  }
+}
